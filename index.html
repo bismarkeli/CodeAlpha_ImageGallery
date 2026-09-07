@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Image Gallery</h1>
+        <p>Explore our gallery</p>
+    </header>
+    <div class="controls-container">
+        <div class="filter-buttons">
+            <button class=" filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="architecture">Architecture</button>
+            <button class="filter-btn" data-filter="technology">Technology</button>
+            <button class="filter-btn" data-filter="people">People</button>
+            <button class="filter-btn" data-filter="animals">Animals</button>
+        </div>
+        <div class="search-box">
+            <span class="search-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </span>
+            <input type="text" id="search-input" placeholder="Search images...">
+        </div>
+    </div>
+    <!-- Hero Featured Image Display -->
+    <div class="hero-container">
+        <img id="hero-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop"
+            alt="Featured View">
+    </div>
+    <div class="galleryBox">
+        <!-- Nature (6 Images) -->
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600&auto=format&fit=crop"
+            alt="Mountain lake landscape" class="gallery-img" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&auto=format&fit=crop"
+            alt="Sunlight in green forest" class="gallery-img" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop"
+            alt="Tropical ocean beach" class="gallery-img" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=600&auto=format&fit=crop"
+            alt="Scenic waterfall flowing through lush green nature" class="gallery-img" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&auto=format&fit=crop"
+            alt="Foggy sunrise over forest hills" class="gallery-img" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&auto=format&fit=crop"
+            alt="Vibrant wildflower meadow under blue sky" class="gallery-img" data-category="nature">
+
+        <!-- Architecture (6 Images) -->
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&auto=format&fit=crop"
+            alt="Modern glass skyscraper" class="gallery-img" data-category="architecture">
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&auto=format&fit=crop"
+            alt="Minimalist building architecture" class="gallery-img" data-category="architecture">
+        <img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?w=600&auto=format&fit=crop"
+            alt="Historical European bridge" class="gallery-img" data-category="architecture">
+        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=600&auto=format&fit=crop"
+            alt="Geometric concrete building structure" class="gallery-img" data-category="architecture">
+        <img src="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?w=600&auto=format&fit=crop"
+            alt="Classic vintage city architecture facade" class="gallery-img" data-category="architecture">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&auto=format&fit=crop"
+            alt="Urban commercial real estate towers" class="gallery-img" data-category="architecture">
+
+        <!-- People (6 Images) -->
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop"
+            alt="Portrait of a young woman" class="gallery-img" data-category="people">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop"
+            alt="Smiling man portrait" class="gallery-img" data-category="people">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&auto=format&fit=crop"
+            alt="Group of friends laughing" class="gallery-img" data-category="people">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&auto=format&fit=crop"
+            alt="Fashion portrait of a stylish woman" class="gallery-img" data-category="people">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&auto=format&fit=crop"
+            alt="Thoughtful young man looking away" class="gallery-img" data-category="people">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&auto=format&fit=crop"
+            alt="Close up portrait of smiling woman" class="gallery-img" data-category="people">
+
+        <!-- Animals (6 Images) -->
+        <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?w=600&auto=format&fit=crop"
+            alt="Red panda resting on tree branch" class="gallery-img" data-category="animals">
+        <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&auto=format&fit=crop"
+            alt="Majestic brown horse running in a field" class="gallery-img" data-category="animals">
+        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=600&auto=format&fit=crop"
+            alt="Cute fluffy rabbit eating grass" class="gallery-img" data-category="animals">
+        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&auto=format&fit=crop"
+            alt="Golden retriever dog running outdoors" class="gallery-img" data-category="animals">
+        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&auto=format&fit=crop"
+            alt="Cute fluffy cat staring" class="gallery-img" data-category="animals">
+        <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?w=600&auto=format&fit=crop"
+            alt="Majestic lion resting in the savanna" class="gallery-img" data-category="animals">
+
+        <!-- Technology (6 Images) -->
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop"
+            alt="Computer circuit board hardware" class="gallery-img" data-category="technology">
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&auto=format&fit=crop"
+            alt="Programming code on a laptop screen" class="gallery-img" data-category="technology">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&auto=format&fit=crop"
+            alt="Modern developer workspace desk setup" class="gallery-img" data-category="technology">
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop"
+            alt="Glowing neon gaming setup and keyboard" class="gallery-img" data-category="technology">
+        <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&auto=format&fit=crop"
+            alt="Laptop computer on modern office desk" class="gallery-img" data-category="technology">
+        <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=600&auto=format&fit=crop"
+            alt="Person typing code on mechanical keyboard" class="gallery-img" data-category="technology">
+    </div>
+    <div id="lightbox" class="lightbox">
+        <span id="lightbox-close" class="lightbox-close">&times;</span>
+        <button id="lightbox-prev" class="lightbox-btn">&#10094;</button>
+        <img id="lightbox-img" class="lightbox-image" src="" alt="Enlarged Image">
+        <button id="lightbox-next" class="lightbox-btn">&#10095;</button>
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+    <footer>
+        <p>&copy; 2026 Interactive Image Gallery. Built with HTML, CSS & JavaScript</p>
+        <p>Developer: Bismark Eli Kudjo</p>
+        <p><a href="mailto:bismarkelikudjo@gmail.com">bismarkelikudjo@gmail.com</a> </p>
+    </footer>
+</body>
+
+</html>
